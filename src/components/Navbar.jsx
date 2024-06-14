@@ -1,4 +1,4 @@
-import { Box, Flex, Link, Button } from "@chakra-ui/react";
+import { Box, Flex, Link } from "@chakra-ui/react";
 import { Link as RouterLink } from "react-router-dom";
 
 const Navbar = () => {
@@ -13,6 +13,9 @@ const Navbar = () => {
         <Flex alignItems="center">
           <Link as={RouterLink} to="/player-profiling" color="white" mx={2}>
             Player Profiling
+          </Link>
+          <Link as={RouterLink} to="/performance-analytics" color="white" mx={2}>
+            Performance Analytics
           </Link>
           <Link as={RouterLink} to="/performance-analytics" color="white" mx={2}>
             Performance Analytics
