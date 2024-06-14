@@ -5,6 +5,12 @@ const PlayerProfiling = () => {
     name: "John Doe",
     bio: "A talented midfielder with exceptional vision and passing skills.",
     image: "/path/to/player-image.jpg",
+    dateOfBirth: "January 1, 1990",
+    position: "Midfielder",
+    height: "6'0\"",
+    weight: "170 lbs",
+    preferredFoot: "Right",
+    currentClub: "FC Awesome",
     playingHistory: [
       { year: "2020", team: "Team A", appearances: 20, goals: 5, assists: 10 },
       { year: "2021", team: "Team B", appearances: 25, goals: 8, assists: 12 },
@@ -24,6 +30,15 @@ const PlayerProfiling = () => {
       <Text mt={2}>{playerData.bio}</Text>
       <Image src={playerData.image} alt={playerData.name} mt={4} boxSize="200px" objectFit="cover" />
       <Divider my={4} />
+      <Heading size="md">Bio Data</Heading>
+      <VStack align="start" mt={2}>
+        <Text><strong>Date of Birth:</strong> {playerData.dateOfBirth}</Text>
+        <Text><strong>Position:</strong> {playerData.position}</Text>
+        <Text><strong>Height:</strong> {playerData.height}</Text>
+        <Text><strong>Weight:</strong> {playerData.weight}</Text>
+        <Text><strong>Preferred Foot:</strong> {playerData.preferredFoot}</Text>
+        <Text><strong>Current Club:</strong> {playerData.currentClub}</Text>
+      </VStack>
       <Heading size="md">Playing History</Heading>
       <VStack align="start" mt={2}>
         {playerData.playingHistory.map((history, index) => (
